@@ -1,4 +1,4 @@
-# TODO setup host server with ssh to tranfer files easier
+# TODO setup host server with ssh to transfer files easier
 
 echo open $HOST > ftp.txt
 echo user $USER $PASS >> ftp.txt
