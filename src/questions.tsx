@@ -15,6 +15,9 @@ export const questions = [
     text: 'The player that last won a board game'
   },
   {
+    text: 'The player that last won this board game'
+  },
+  {
     text: 'The player who most recently slept in a tent'
   },
   {

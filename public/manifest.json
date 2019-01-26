@@ -1,11 +1,21 @@
 {
-  "short_name": "Who Goes First",
+  "short_name": "WhoGoesFirst",
   "name": "Who Goes First Question Generator",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
+    },
+    {
+      "src": "icons/tiny-sword-64",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/tiny-sword-512",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
