@@ -1,0 +1,63 @@
+.animate {
+  animation-duration: 1.3s;
+  animation-fill-mode: both;
+}
+
+
+.flipInX {
+  animation-name: flipInX;
+}
+
+/* https://daneden.github.io/animate.css/ */
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        animation-timing-function: ease-in;
+    }
+
+    10% {
+        transform: perspective(400px) rotateX(0deg);
+        animation-timing-function: ease-in;
+    }
+
+    20% {
+        transform: perspective(400px) rotateX(-90deg);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: perspective(400px) rotateX(-180deg);
+    }
+
+    40% {
+        transform: perspective(400px) rotateX(-270deg);
+    }
+
+    50% {
+        transform: perspective(400px) rotateX(-360deg);
+    }
+
+    /* 60% {
+        transform: perspective(400px) rotateX(-450deg);
+        animation-timing-function: ease-in
+    }
+
+    70% {
+        transform: perspective(400px) rotateX(-405deg);
+        animation-timing-function: ease-in
+    } */
+
+    80% {
+        transform: rotateX(-360deg);
+    }
+
+    90% {
+        transform: rotateX(-360deg);
+    }
+
+    to {
+        transform: perspective(400px)
+    }
+}
+
+
