@@ -2,9 +2,9 @@
 
 echo open $HOST > ftp.txt
 echo user $USER $PASS >> ftp.txt
-echo mkdir static
-echo mkdir static/js
-echo mkdir static/css
+echo mkdir static >> ftp.txt
+echo mkdir static/js >> ftp.txt
+echo mkdir static/css >> ftp.txt
 find ./build/ -type f -printf "put build/%P %P\n" >> ftp.txt
 echo bye >> ftp.txt
 
