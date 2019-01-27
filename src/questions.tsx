@@ -118,11 +118,11 @@ export const questions = [
   },
 ];
 
-export function getRandomQuestion(previousQuestion?: string): string {
+export function getRandomQuestion(previousQuestions?: string[]): string {
   let question: string; 
   do {
     question = questions[getRandomNumber(0, questions.length - 1)].text
-  } while(question === previousQuestion);
+  } while((previousQuestions || []).includes(question));
   return question;
 }
 

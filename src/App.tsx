@@ -2,14 +2,17 @@ import { default as classNames } from 'classnames';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import './style.css';
+import './App.css';
 import './animation.css';
 import { getRandomQuestion } from './questions';
+
+const DONT_REPEAT_QUESTIONS_IN_X_TRYS = 10;
 
 interface AppProps { }
 interface AppState {
   name: string;
   displayedQuestion: string;
+  lastShownQuestions: string[];
   isFlipping: boolean;
 }
 
@@ -18,7 +21,8 @@ export class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'React', 
-      displayedQuestion: getRandomQuestion(''),
+      displayedQuestion: getRandomQuestion([]),
+      lastShownQuestions: [],
       isFlipping: false,
     };
   }
@@ -27,7 +31,8 @@ export class App extends Component<AppProps, AppState> {
 
     const onRerollClick = () => {
       this.setState({
-        displayedQuestion: getRandomQuestion(this.state.displayedQuestion),
+        displayedQuestion: getRandomQuestion(this.state.lastShownQuestions),
+        lastShownQuestions: getLastX(this.state.lastShownQuestions.concat(this.state.displayedQuestion)),
         isFlipping: true,
       });
       setTimeout(() => {
@@ -53,4 +58,8 @@ export class App extends Component<AppProps, AppState> {
       </div>
     );
   }
+}
+
+function getLastX<T>(array: Array<T>) {
+  return array.slice(Math.max(array.length - DONT_REPEAT_QUESTIONS_IN_X_TRYS, 0))
 }
