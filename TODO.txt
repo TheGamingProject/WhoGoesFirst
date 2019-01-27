@@ -1,7 +1,2 @@
 
-X- setup react env
- - figure out where to host
- - setup subdomain
- - setup deployment scripts
-
- - setup real domain
+ - better ssl renewal
