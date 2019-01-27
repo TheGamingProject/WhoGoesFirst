@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "icons/tiny-sword-64",
+      "src": "icons/tiny-sword-64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "icons/tiny-sword-512",
+      "src": "icons/tiny-sword-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
