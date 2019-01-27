@@ -2,6 +2,7 @@
   "name": "who-goes-first",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://whogoesfirst.thegamingproject.org",
   "dependencies": {
     "@types/classnames": "^2.2.7",
     "@types/jest": "^23.3.13",

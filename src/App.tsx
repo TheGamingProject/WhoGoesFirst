@@ -38,12 +38,14 @@ export class App extends Component<AppProps, AppState> {
     }
 
     return (
-      <div className="app">
+      <div className="App">
         <div className="container"> 
           <h1> The player who goes first is: </h1>
-          <div className={classNames('spinning-question', 'animate', {flipInX: this.state.isFlipping})}>
-            <div className="inner">
-              { this.state.displayedQuestion }
+          <div className="spinning-question-container">
+            <div className={classNames('spinning-question', 'animate', {flipInX: this.state.isFlipping})}>
+              <div className="inner">
+                { this.state.displayedQuestion }
+              </div>
             </div>
           </div>
           <button className="reroll-btn" onClick={onRerollClick} disabled={this.state.isFlipping}> Who goes first? </button>
