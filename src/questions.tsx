@@ -116,6 +116,15 @@ export const questions = [
   {
     text: 'The player who last watched a movie in a theatre'
   },
+  {
+    text: 'The player who last talked on the phone'
+  },
+  {
+    text: 'The player who lives farthest from the host\'s house'
+  },
+  {
+    text: 'The player with the longest beard'
+  },
 ];
 
 export function getRandomQuestion(previousQuestions?: string[]): string {

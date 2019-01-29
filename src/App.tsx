@@ -1,6 +1,5 @@
 import { default as classNames } from 'classnames';
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
 import './App.css';
 import './animation.css';
