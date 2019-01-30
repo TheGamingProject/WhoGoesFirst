@@ -1,10 +1,13 @@
 
 .App {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url('./images/background-edit.png');
+  background-size: contain; /* TODO scale with screen size */
 }
 
 .container {
@@ -12,12 +15,14 @@
   min-width: 900px;
   flex-direction: column;
   align-items: center;
-  background-color: #d9b44a;
+  z-index: 1;
 }
 
 h1 {
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 1.8em;
+  color: white;
 }
 @media (max-width: 450px) {
   h1 {
@@ -43,33 +48,35 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 35vh;
+  min-height: 25vh;
 }
 
 .spinning-question {
-  padding: 10px;
-  border: 10px solid #4f6457;
-  border-radius: 5px;
+  padding: 4px 50px;
+  max-width: 100vh;
   font-size: 1.4em;
-  background-color: #acd0c0;
 }
 @media (max-height: 600px) {
   .spinning-question {
     font-size: 1.2em;
   }
 }
+@media (max-width: 400px) {
+  .spinning-question {
+    padding: 4px;
+  }
+}
 
 .inner {
   min-width: 600px;
   min-height: 100px;
-  padding: 10px;
-  background-color: #75b1a9;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  font-weight: 600;
   color: white;
-  text-shadow: 4px 4px 4px #000000;
 }
 
 
@@ -89,9 +96,57 @@ h1 {
 .reroll-btn {
   min-height: 60px;
   border-width: 1px;
-  padding: 15px 25px;
-  margin-top: 25px;
+  border-style: none;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin-top: 0;
   margin-bottom: 40px;
-  font-size: 1.6em;
-  background-color: #acd0c0;
+  font-size: 1.5em;
+  color: white;
+  background: rgb(252,60,73);
+  background: linear-gradient(0deg, rgba(252,60,73,1) 0%, rgba(255,110,59,1) 100%);
+  /* box-shadow: 0 7px #999; */
+}
+
+.reroll-btn:focus {
+  outline: none;
+}
+
+.reroll-btn:active {
+  background: linear-gradient(0deg, rgba(252,60,73,1) 0%, rgb(195, 81, 41) 100%);
+}
+
+/* .reroll-btn:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+} */
+
+.bottom-left-blocks,
+.bottom-right-blocks,
+.top-right-blocks {
+  position: absolute;
+}
+
+.bottom-left-blocks {
+  bottom: 0;
+  left: 0;
+  width: 198px; /* TODO scale with screen size */
+  height: 397px;
+  background-image: url('./images/bottom-left.png');
+}
+
+.bottom-right-blocks {
+  bottom: 0;
+  right: 0;
+  width: 66px;
+  height: 198px;
+  background-image: url('./images/bottom-right.png');
+}
+
+.top-right-blocks {
+  top: 0;
+  right: 0;
+  width: 329px;
+  height: 296px;
+  background-image: url('./images/top-right.png');
 }

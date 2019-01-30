@@ -19,7 +19,7 @@ export class App extends Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
     this.state = {
-      name: 'React', 
+      name: 'React',
       displayedQuestion: getRandomQuestion([]),
       lastShownQuestions: [],
       isFlipping: false,
@@ -43,7 +43,7 @@ export class App extends Component<AppProps, AppState> {
 
     return (
       <div className="App">
-        <div className="container"> 
+        <div className="container">
           <h1> The player who goes first is: </h1>
           <div className="spinning-question-container">
             <div className={classNames('spinning-question', 'animate', {flipInX: this.state.isFlipping})}>
@@ -52,8 +52,11 @@ export class App extends Component<AppProps, AppState> {
               </div>
             </div>
           </div>
-          <button className="reroll-btn" onClick={onRerollClick} disabled={this.state.isFlipping}> Who goes first? </button>
+          <button className="reroll-btn" onClick={onRerollClick} disabled={this.state.isFlipping}> Who Goes First? </button>
         </div>
+        <span className="bottom-left-blocks"/>
+        <span className="bottom-right-blocks"/>
+        <span className="top-right-blocks"/>
       </div>
     );
   }

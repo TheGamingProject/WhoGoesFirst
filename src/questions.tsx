@@ -1,7 +1,7 @@
 /**
  * Filter ideas
  *  - subjective (who has the best car)
- * 
+ *
  */
 
 export const questions = [
@@ -123,12 +123,15 @@ export const questions = [
     text: 'The player who lives farthest from the host\'s house'
   },
   {
+    text: 'The player who lives closest to the host\'s house, other than the host'
+  },
+  {
     text: 'The player with the longest beard'
   },
 ];
 
 export function getRandomQuestion(previousQuestions?: string[]): string {
-  let question: string; 
+  let question: string;
   do {
     question = questions[getRandomNumber(0, questions.length - 1)].text
   } while((previousQuestions || []).includes(question));
