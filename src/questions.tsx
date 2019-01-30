@@ -114,6 +114,9 @@ export const questions = [
     text: 'The player who was born the farthest away'
   },
   {
+    text: 'The player who was born the closest to the host\'s house'
+  },
+  {
     text: 'The player who last watched a movie in a theatre'
   },
   {
