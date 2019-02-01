@@ -1,3 +1,23 @@
+:root {
+  --blocks-scale: 1;
+}
+
+
+@media (max-width: 300px) {
+  :root {
+    --blocks-scale: .3;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --blocks-scale: .4;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --blocks-scale: .6;
+  }
+}
 
 .App {
   position: relative;
@@ -6,8 +26,23 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('./images/background-edit.png');
-  background-size: contain; /* TODO scale with screen size */
+}
+
+/* hack to rotate image... grossss */
+.App:before {
+  position: absolute;
+  content: "";
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  background: url('./images/background-edit.png') no-repeat 0 0;
+}
+@media (max-width: 500px) {
+  .App:before {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg);
+  }
 }
 
 .container {
@@ -16,6 +51,11 @@
   flex-direction: column;
   align-items: center;
   z-index: 1;
+}
+@media (max-width: 900px) {
+  .container {
+    min-width: 100%;
+  }
 }
 
 h1 {
@@ -78,17 +118,9 @@ h1 {
   font-weight: 600;
   color: white;
 }
-
-
-@media (max-width: 900px) {
-  .container {
-    min-width: 100%;
-  }
-}
-
 @media (max-width: 600px) {
-
   .inner {
+    text-align: center;
     min-width: initial;
   }
 }
@@ -106,6 +138,12 @@ h1 {
   background: rgb(252,60,73);
   background: linear-gradient(0deg, rgba(252,60,73,1) 0%, rgba(255,110,59,1) 100%);
   /* box-shadow: 0 7px #999; */
+}
+@media (max-width: 350px) {
+  .reroll-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .reroll-btn:focus {
@@ -125,28 +163,29 @@ h1 {
 .bottom-right-blocks,
 .top-right-blocks {
   position: absolute;
+  background-size: cover;
 }
 
 .bottom-left-blocks {
   bottom: 0;
   left: 0;
-  width: 198px; /* TODO scale with screen size */
-  height: 397px;
+  width: calc(198px * var(--blocks-scale));
+  height: calc(397px * var(--blocks-scale));
   background-image: url('./images/bottom-left.png');
 }
 
 .bottom-right-blocks {
   bottom: 0;
   right: 0;
-  width: 66px;
-  height: 198px;
+  width: calc(66px * var(--blocks-scale));
+  height: calc(198px * var(--blocks-scale));
   background-image: url('./images/bottom-right.png');
 }
 
 .top-right-blocks {
   top: 0;
   right: 0;
-  width: 329px;
-  height: 296px;
+  width: calc(329px * var(--blocks-scale));
+  height: calc(296px * var(--blocks-scale));
   background-image: url('./images/top-right.png');
 }

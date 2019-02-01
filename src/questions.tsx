@@ -54,7 +54,7 @@ export const questions = [
     text: 'The player to the right of the player reading this'
   },
   {
-    text: 'The player who hasn\'t played board games the longest'
+    text: 'The player who hasn\'t played board games the longest' // TODO
   },
   {
     text: 'The player who last played pinball'
