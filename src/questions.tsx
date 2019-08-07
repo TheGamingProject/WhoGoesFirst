@@ -131,6 +131,66 @@ export const questions = [
   {
     text: 'The player with the longest beard'
   },
+  {
+    text: 'The player with the biggest hat on'
+  },
+  {
+    text: 'The player closest to a window'
+  },
+  {
+    text: 'The player to last play an organized sport'
+  },
+  {
+    text: 'The player who most recently went on vacation'
+  },
+  {
+    text: 'The player who was most recently at work'
+  },
+  {
+    text: 'The player with the next birthday'
+  },
+  {
+    text: 'The player with the smallest glasses'
+  },
+  {
+    text: 'The player who most recently visited a doctor'
+  },
+  {
+    text: 'The player who owns the most hats'
+  },
+  {
+    text: 'The player who last went to a wedding'
+  },
+  {
+    text: 'The player with the fullest drink'
+  },
+  {
+    text: 'The player who last had a job interview'
+  },
+  {
+    text: 'The player who last ate pizza'
+  },
+  {
+    text: 'The player who most recently finished a television series'
+  },
+  {
+    text: 'The player who most recently finished a book'
+  },
+  {
+    text: 'The player who last opened a magazine
+  },
+  {
+    text: 'The player who brought the most snacks'
+  },
+  {
+    text: 'The player who last roasted marshmallows'
+  },
+  {
+    text: 'The player with the longest name'
+  },
+  {
+    text: 'The player with the shortest name'
+  },
 ];
 
 export function getRandomQuestion(previousQuestions?: string[]): string {
