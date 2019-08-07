@@ -177,7 +177,7 @@ export const questions = [
     text: 'The player who most recently finished a book'
   },
   {
-    text: 'The player who last opened a magazine
+    text: 'The player who last opened a magazine'
   },
   {
     text: 'The player who brought the most snacks'
@@ -186,11 +186,24 @@ export const questions = [
     text: 'The player who last roasted marshmallows'
   },
   {
-    text: 'The player with the longest name'
+    text: 'The player with the longest full name'
   },
   {
-    text: 'The player with the shortest name'
+    text: 'The player with the shortest full name'
   },
+  {
+    text: 'The player with the longest first name'
+  },
+  {
+    text: 'The player with the shortest first name'
+  },
+  {
+    text: 'The player with the longest last name'
+  },
+  {
+    text: 'The player with the shortest last name'
+  },
+
 ];
 
 export function getRandomQuestion(previousQuestions?: string[]): string {
