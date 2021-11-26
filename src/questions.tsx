@@ -6,7 +6,7 @@
 
 export const questions = [
   {
-  text: 'The player who has the nearest birthday'
+    text: 'The player who has the nearest birthday'
   },
   {
     text: 'The player to first sing a song lyric'
@@ -54,7 +54,7 @@ export const questions = [
     text: 'The player to the right of the player reading this'
   },
   {
-    text: 'The player who hasn\'t played board games the longest' // TODO
+    text: "The player who hasn't played board games the longest" // TODO
   },
   {
     text: 'The player who last played pinball'
@@ -114,7 +114,7 @@ export const questions = [
     text: 'The player who was born the farthest away'
   },
   {
-    text: 'The player who was born the closest to the host\'s house'
+    text: "The player who was born the closest to the host's house"
   },
   {
     text: 'The player who last watched a movie in a theatre'
@@ -123,10 +123,11 @@ export const questions = [
     text: 'The player who last talked on the phone'
   },
   {
-    text: 'The player who lives farthest from the host\'s house'
+    text: "The player who lives farthest from the host's house"
   },
   {
-    text: 'The player who lives closest to the host\'s house, other than the host'
+    text:
+      "The player who lives closest to the host's house, other than the host"
   },
   {
     text: 'The player with the longest beard'
@@ -203,14 +204,16 @@ export const questions = [
   {
     text: 'The player with the shortest last name'
   },
-
+  {
+    text: 'The player who last drank water from a hose'
+  }
 ];
 
 export function getRandomQuestion(previousQuestions?: string[]): string {
   let question: string;
   do {
-    question = questions[getRandomNumber(0, questions.length - 1)].text
-  } while((previousQuestions || []).includes(question));
+    question = questions[getRandomNumber(0, questions.length - 1)].text;
+  } while ((previousQuestions || []).includes(question));
   return question;
 }
 

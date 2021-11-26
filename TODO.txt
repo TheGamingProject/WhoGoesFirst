@@ -1,3 +1,0 @@
-
- - better ssl renewal
-  - moving site from web hosting to cloud
