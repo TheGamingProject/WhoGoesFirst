@@ -206,6 +206,45 @@ export const questions = [
   },
   {
     text: 'The player who last drank water from a hose'
+  },
+  {
+    text: 'The player who last rode a train'
+  },
+  {
+    text: 'The player who last rode a roller coaster'
+  },
+  {
+    text: 'The player who last rode a bike'
+  },
+  {
+    text: 'The player who last went on a hike'
+  },
+  {
+    text: 'The player who last roller skated'
+  },
+  {
+    text: 'The player who last ice skated'
+  },
+  {
+    text: 'The player with the biggest shoe size'
+  },
+  {
+    text: 'The player with the smallest shoe size'
+  },
+  {
+    text: 'The player who last defecated'
+  },
+  {
+    text: 'The player who last finished a TV series'
+  },
+  {
+    text: 'The player with the oldest phone'
+  },
+  {
+    text: 'The player with the newest phone'
+  },
+  {
+    text: 'The player who last bought something'
   }
 ];
 
